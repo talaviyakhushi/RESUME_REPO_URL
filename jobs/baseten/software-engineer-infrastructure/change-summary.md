@@ -1,0 +1,17 @@
+# Change Summary — Baseten, Software Engineer Infrastructure
+
+| Location | Type | Before | After | JD link | Suggested emphasis |
+|---|---|---|---|---|---|
+| Summary | rephrase | (generic/base summary not present as standalone; derived from skills/experience) | "Python backend and ML-model-integration experience... distributed-systems research background... CI/CD-driven deployment on AWS" | JD asks for Python, ML/model serving, distributed systems, infra automation | Lead with infra-relevant facts, not fullstack framing |
+| Forty7 — AI Price Estimator | reorder | Bullet order in `resume.md` puts CI/CD detail mid-paragraph after feature description | Moved CI/CD/deploy detail to first bullet | "Support infrastructure automation to improve ML deployment workflows" | Deployment pipeline first |
+| Forty7 — AI Price Estimator | emphasize | "gpt-4o vision strict JSON classification" framed as product feature | Reframed as "production ML inference service" / "model inference at the API boundary" | "Basic understanding of machine learning concepts and model serving" | Model-serving language |
+| Forty7 — Max Bid | trim | Full multi-paragraph Max Bid section (TypeORM entity, validators, Angular UI, notifications) | Reduced to one bullet noting the Bull queue async job as event-driven backend processing | Not a core JD match; trimmed for space, kept minimal distributed/async signal | — |
+| Forty7 — Klaviyo/WATI/Guest Access/Pages/SEO/Bug fixes | trim | ~15 bullets across analytics, WATI, guest access, pages, SEO, bug fixes | Removed entirely from tailored resume | Not relevant to infra JD; frontend/marketing integration work | — |
+| NJIT Research Assistant | emphasize | "DBO document outsourcing research system" described broadly | Led with "distributed document-outsourcing research system spanning 4 physical servers" and port-mapping detail | "Familiarity with distributed systems concepts" | Distributed systems keyword |
+| NJIT Research Assistant | trim | Detailed UI/UX bullets (drag-and-drop, keyword bubble UI) | Removed | Not relevant to infra JD | — |
+| BNP Paribas | trim | Full onboarding + migration narrative | Condensed to 2 bullets (migration delivery, Jira tool) | Lower relevance to infra JD; kept for continuity/tenure signal | — |
+| Projects | trim | Outfitted, Real-Time AI Mock Interviewer, Flight Fare Prediction all detailed | Kept only Outfitted, condensed to 2 bullets (multi-model pipeline, retrieval reliability) | JD interest in "ML/AI infrastructure"; Outfitted shows backend Python + model orchestration | Cut Mock Interviewer and Flight Fare Prediction for space — no infra-specific link strong enough to justify length |
+| Skills | reorder | `resume.md` order: Languages (Java first), Frameworks, Databases, AI/ML, Cloud/Infra, Tools | Reordered to Languages (Python first), AI/ML, Cloud/Infra, Backend/Frameworks, Databases, Tools | JD stack ordering (Python/Go, ML, infra) | Surface infra-relevant categories higher |
+| Skills | rephrase | "AI / ML: ... RAG pipelines, vector embeddings, prompt engineering" | Added "model serving via REST APIs" (already true per Outfitted/estimator work) | "Basic understanding of ... model serving" | Honest equivalent phrasing, no new tool added |
+
+No skills, tools, employers, titles, or metrics were added beyond what exists in `resume.md`. Go, Kubernetes, and infra-monitoring tooling were **not** added anywhere — see `fit-report.md` → Do not add.
