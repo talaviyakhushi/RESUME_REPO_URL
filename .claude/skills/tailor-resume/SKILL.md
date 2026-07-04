@@ -55,8 +55,8 @@ Every bullet in `tailored-resume.md` follows STAR compressed to one line:
 **outcome/result first, then the action and context that produced it.**
 
 - Pattern: `<Result or problem solved> by <action> <context/stack>` — e.g.
-  "Prevented duplicate-signup failures by handling Klaviyo HTTP 409 responses
-  and re-routing existing profiles to the subscribe flow in NestJS."
+  "Prevented duplicate-signup failures by handling failed API responses and
+  re-routing existing profiles to the subscribe flow in NestJS."
 - Never write plain "Built X using Y" activity bullets. If the master profile
   phrases something that way, reframe it around the problem it solved or the
   outcome it enabled.
@@ -64,6 +64,26 @@ Every bullet in `tailored-resume.md` follows STAR compressed to one line:
   exist in `resume.md`. Never invent or extrapolate a number.
 - When no metric exists, the result clause is qualitative but concrete
   (what became possible, what failure stopped happening).
+
+## Audience rule — ATS first, recruiter second, engineer last
+
+The resume has two gatekeepers before any engineer reads it: the ATS keyword
+scan, then a recruiter skimming for ~7 seconds. Write for them.
+
+- **Max 2 lines (~25 words) per bullet.** One idea per bullet. No chained
+  arrows (`A → B → C`), no multi-clause pile-ups.
+- **JD keywords must appear in plain sight** — name the technology the way
+  the JD names it (e.g. "CI/CD pipeline", "REST APIs", "PostgreSQL"), because
+  that is what the ATS matches on.
+- **No implementation internals**: never include function names, file names,
+  class names, config values, shell commands, code syntax, or backticked
+  identifiers in `tailored-resume.md`. "Automated deployment with a CI/CD
+  pipeline (GitHub Actions, AWS EC2)" — not the build → SCP → systemd chain.
+- **Plain-English verbs a non-engineer understands**: built, launched,
+  automated, reduced, sped up, secured, scaled. The recruiter must grasp what
+  happened without knowing what systemd or a Bull queue is.
+- Depth lives in the master profile and comes out in interviews — the bullet
+  only has to earn the phone screen.
 
 ## Tailoring approach
 
