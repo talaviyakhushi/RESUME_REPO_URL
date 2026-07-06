@@ -33,6 +33,17 @@ specific job posting supplied in the prompt. Follow every rule in this file.
    BNP: 3, each project: 3).
 4. **Change summary** — Load `references/change-summary.md`. Document every
    meaningful edit in `change-summary.md`.
+4b. **LaTeX output** — Read `templates/resume-template.tex` and write
+   `tailored-resume.tex` in the same job folder: fill the template's
+   placeholder slots (summary, skills lines, stack lines, bullets, project
+   block) with the exact content of `tailored-resume.md`. Rules:
+   - Escape LaTeX special characters: `%` → `\%`, `&` → `\&`, `#` → `\#`,
+     `$` → `\$`, `_` → `\_`.
+   - Date ranges use `--` (e.g. `Jan 2026 -- May 2026`).
+   - Do not alter the template's preamble, custom commands, or spacing —
+     content goes into the marked slots only.
+   - Keep heading structure: company bold via `\resumeExpHeading`, stack via
+     `\resumeStack`, bullets via `\resumeItem`.
 5. **Quality** — Skim `references/anti-patterns.md` and
    `references/agent-governance.md`. Run the six-second clarity gate and the
    ASCII normalization check from `references/recruiter-heuristics.md` on
@@ -41,11 +52,12 @@ specific job posting supplied in the prompt. Follow every rule in this file.
 
 ## Output location convention
 
-Write exactly three files, creating directories as needed:
+Write exactly four files, creating directories as needed:
 
 ```
 jobs/{company-slug}/{role-slug}/fit-report.md
 jobs/{company-slug}/{role-slug}/tailored-resume.md
+jobs/{company-slug}/{role-slug}/tailored-resume.tex
 jobs/{company-slug}/{role-slug}/change-summary.md
 ```
 
