@@ -101,6 +101,17 @@ scan, then a recruiter skimming for ~7 seconds. Write for them.
 - **Plain-English verbs a non-engineer understands**: built, launched,
   automated, reduced, sped up, secured, scaled. The recruiter must grasp what
   happened without knowing what systemd or a Bull queue is.
+- **Simple verbs, technical nouns.** Verbs carry zero ATS keyword value, so
+  keep them plain — never "orchestrated", "leveraged", "spearheaded",
+  "architected", "utilized", "facilitated". The technical precision lives in
+  the nouns, which are exactly what the ATS matches: "GraphQL API",
+  "PostgreSQL", "RAG pipeline", "CI/CD". A recruiter must follow the sentence;
+  an engineer must respect the nouns. Both, always.
+- **A project's first bullet must say what the product does for its user**
+  before any bullet goes deep on tech — "Built an AI styling app that
+  suggests outfits from photos of the user's own wardrobe, powered by OpenAI
+  vision models and vector search." If the reader can't tell what the project
+  is, the technical bullets after it are wasted.
 - Depth lives in the master profile and comes out in interviews — the bullet
   only has to earn the phone screen.
 
