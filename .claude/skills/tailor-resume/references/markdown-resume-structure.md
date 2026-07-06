@@ -39,6 +39,24 @@ Job block template:
   "(Angular, Spring Boot, Java, MySQL, AWS EC2/Amplify)" is banned. The stack
   line carries that information; the bullet carries the outcome.
 
+## Skills section — max 5 categories
+
+- The tailored resume's Skills section has **at most 5 categories**, 4-8 items
+  each. The master profile's full skill list is the source; the JD decides
+  which categories exist and what fills them.
+- Choose category names by role archetype, not by copying the master's
+  grouping. Backend JD → Languages, Backend, Databases, Cloud/DevOps,
+  Practices. AI-heavy JD → swap a category for AI/ML. Frontend JD → swap in
+  Frontend.
+- Categories must be semantically correct: Agile/Scrum and API design are
+  practices, never tools; JUnit is a testing framework; REST APIs is not a
+  tool. If an item doesn't fit a category honestly, cut the item rather than
+  bend the category.
+- Order categories by JD relevance — the stack the JD names most goes first
+  after Languages.
+- Drop weak/irrelevant items entirely (e.g. Figma on a backend application).
+  A shorter, sharper skills block beats an exhaustive one.
+
 ## Stack-line / bullet coherence
 
 - Every item on a role's `*Stack:*` line must be evidenced by that role's
