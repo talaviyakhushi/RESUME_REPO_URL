@@ -31,8 +31,10 @@ Job block template:
 ## Tech stack placement
 
 - Every job and project gets a one-line `*Stack: ...*` italic line directly
-  under its heading, listing the technologies used in that role (pick the
-  JD-relevant ones from the master profile, ~4-8 items).
+  under its heading with **at most 4 items** — the technologies most relevant
+  to this JD, picked from the master profile. Not an inventory: the 4 that
+  make the recruiter nod. Everything else stays in the master profile and the
+  Skills section.
 - Bullets mention at most 1-2 technologies each, woven into the sentence
   naturally ("a role-guarded GraphQL mutation", "a Spring Boot service").
 - **Never** dump a parenthetical stack list inside a bullet —
