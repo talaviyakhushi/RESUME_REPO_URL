@@ -111,6 +111,30 @@ scan, then a recruiter skimming for ~7 seconds. Write for them.
   `*Stack:*` line under each role heading (see
   `references/markdown-resume-structure.md`); a bullet names at most 1-2
   technologies, woven into the sentence.
+- **Don't re-list the stack line inside bullets.** If the stack line already
+  says NestJS, GraphQL, TypeORM, Bull queue, a bullet that recites three of
+  them ("by building a NestJS GraphQL API, TypeORM entity, and Bull queue
+  job") is redundant noise. Name a technology in a bullet only when that
+  specific pairing adds information the stack line can't carry.
+- **No low-signal keywords.** Never surface junior/weak-signal work in a
+  bullet: "CSS fixes", "styling tweaks", "attended standups", "updated
+  documentation". These exist in the master profile for completeness, not for
+  the resume. Exception: the JD itself emphasizes that exact skill.
+- **One fact, one bullet.** A metric or fact from `resume.md` (e.g. "10-12
+  Jiras") may appear in at most ONE bullet per resume. Duplicating a fact
+  wastes a slot.
+- **Bullet order within each role: Wow → Bridge → ATS.**
+  1. *Wow* — the most impressive, metric-backed thing done there. The single
+     bullet you'd keep if only one survived.
+  2. *Bridge* — the fact that most directly maps this role's work onto the
+     JD's requirements, phrased in the JD's language.
+  3. *ATS* — the keyword carrier: JD-matching tools, duties, and practices
+     woven into one honest bullet.
+  The JD decides which fact is Wow vs Bridge — for an AI-heavy JD the GenAI
+  tool leads; for a platform JD the production feature might.
+- **Self-check before writing files:** re-read every bullet against the
+  banned lists (weak starts, clichés, banned verbs, low-signal keywords) and
+  the rules above. Fix violations, then write.
 - **JD keywords must appear in plain sight** — name the technology the way
   the JD names it (e.g. "CI/CD pipeline", "REST APIs", "PostgreSQL"), because
   that is what the ATS matches on.
