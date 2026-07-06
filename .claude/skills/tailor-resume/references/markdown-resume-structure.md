@@ -22,9 +22,21 @@ Job block template:
 
 ```markdown
 ### Title — Company (dates)
+*Stack: Tool1, Tool2, Tool3, Tool4*
 
 - Bullet in one-line STAR form: result/outcome first, then action + context,
   with metric when the master profile has one
 ```
+
+## Tech stack placement
+
+- Every job and project gets a one-line `*Stack: ...*` italic line directly
+  under its heading, listing the technologies used in that role (pick the
+  JD-relevant ones from the master profile, ~4-8 items).
+- Bullets mention at most 1-2 technologies each, woven into the sentence
+  naturally ("a role-guarded GraphQL mutation", "a Spring Boot service").
+- **Never** dump a parenthetical stack list inside a bullet —
+  "(Angular, Spring Boot, Java, MySQL, AWS EC2/Amplify)" is banned. The stack
+  line carries that information; the bullet carries the outcome.
 
 Use HTML comments `<!-- anchor:company-role -->` only when needed for stable diffs.

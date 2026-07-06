@@ -79,6 +79,18 @@ scan, then a recruiter skimming for ~7 seconds. Write for them.
 - **Hard cap: 25 words per bullet.** Count the words; 26+ is a violation —
   rewrite until it fits. One idea per bullet. No chained arrows (`A → B → C`),
   no multi-clause pile-ups.
+- **F-scan rule: the first 3-4 words of every bullet must carry the outcome.**
+  Recruiters scan the left edge of the page; a bullet earns its read in its
+  opening words ("Cut release cycles to 3 minutes...", "Reached 90% pricing
+  accuracy..."). Never open with process framing.
+- **No enumeration bullets.** "Shipped X end to end: schema, mutation, queue
+  logic" lists the process, not the result — banned. State what the feature
+  achieved or enabled; the components stay in the master profile for
+  interviews.
+- **No parenthetical tech-stack dumps in bullets.** Stack lives on the
+  `*Stack:*` line under each role heading (see
+  `references/markdown-resume-structure.md`); a bullet names at most 1-2
+  technologies, woven into the sentence.
 - **JD keywords must appear in plain sight** — name the technology the way
   the JD names it (e.g. "CI/CD pipeline", "REST APIs", "PostgreSQL"), because
   that is what the ATS matches on.
