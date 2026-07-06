@@ -24,13 +24,17 @@ specific job posting supplied in the prompt. Follow every rule in this file.
    `jobs/{company-slug}/{role-slug}/fit-report.md` with **Overall fit**,
    **Strong matches**, **Gaps**, **Do not add**.
 3. **Tailor** — Load `references/keyword-alignment.md`,
-   `references/markdown-resume-structure.md`, and
-   `references/ats-formatting-and-parsing.md`. Write `tailored-resume.md` by
-   rephrasing/reordering/emphasizing facts from `resume.md` only.
+   `references/markdown-resume-structure.md`,
+   `references/ats-formatting-and-parsing.md`, and
+   `references/recruiter-heuristics.md`. Build the recruiter-side risk map
+   internally, then write `tailored-resume.md` by rephrasing/reordering/
+   emphasizing facts from `resume.md` only.
 4. **Change summary** — Load `references/change-summary.md`. Document every
    meaningful edit in `change-summary.md`.
 5. **Quality** — Skim `references/anti-patterns.md` and
-   `references/agent-governance.md`. Optional: note plaintext test steps from
+   `references/agent-governance.md`. Run the six-second clarity gate and the
+   ASCII normalization check from `references/recruiter-heuristics.md` on
+   `tailored-resume.md`. Optional: note plaintext test steps from
    `references/export-and-plaintext-test.md`.
 
 ## Output location convention
