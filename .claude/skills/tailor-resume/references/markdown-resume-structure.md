@@ -8,7 +8,7 @@
 
 ## Bullet counts — fixed, not optional
 
-- **Forty7 (most recent role): exactly 4 bullets**
+- **Forty7 (most recent role): exactly 3 bullets**
 - **NJIT Research Assistant: exactly 3 bullets**
 - **BNP Paribas: exactly 3 bullets**
 - **Each project included: exactly 3 bullets**

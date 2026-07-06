@@ -29,7 +29,7 @@ specific job posting supplied in the prompt. Follow every rule in this file.
    `references/recruiter-heuristics.md`. Build the recruiter-side risk map
    internally, then write `tailored-resume.md` by rephrasing/reordering/
    emphasizing facts from `resume.md` only. Respect the fixed bullet counts
-   in `references/markdown-resume-structure.md` (Forty7: 4, NJIT RA: 3,
+   in `references/markdown-resume-structure.md` (Forty7: 3, NJIT RA: 3,
    BNP: 3, each project: 3).
 4. **Change summary** — Load `references/change-summary.md`. Document every
    meaningful edit in `change-summary.md`.
