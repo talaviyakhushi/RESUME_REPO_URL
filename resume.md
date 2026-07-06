@@ -50,7 +50,7 @@ JUnit is a testing framework; REST APIs is not a tool.)
 **Location:** New York, NY
 **Duration:** January 2026 – May 2026
 **Stack:** Angular 18, TypeScript, NGXS, Apollo GraphQL (codegen), NestJS, TypeORM, PostgreSQL, AWS (S3, SES, SNS), Angular SSR, Klaviyo API, WATI (WhatsApp Business API), Microsoft Clarity, SCSS
-**Project context:** Forty7 is a live diamond and gemstone auction platform with 100 users — Angular SSR frontend, NestJS/GraphQL API, Angular admin panel. Khushi joined an existing production codebase and took over as its sole developer, contributing across all three apps: third-party marketing/analytics integrations, guest access architecture, new pages from scratch, GraphQL schema extensions, and NestJS backend fixes.
+**Project context:** Forty7 is a live diamond and gemstone auction platform with 100 users — Angular SSR frontend, NestJS/GraphQL API, Angular admin panel. Khushi joined an existing production codebase and contributed across all three apps: third-party marketing/analytics integrations, guest access architecture, new pages from scratch, GraphQL schema extensions, and NestJS backend fixes.
 
 ---
 
@@ -95,7 +95,7 @@ JUnit is a testing framework; REST APIs is not a tool.)
 
 ---
 
-**Max Bid (Proxy Bidding) Feature — end-to-end, sole owner:**
+**Max Bid (Proxy Bidding) Feature — built end-to-end (do not phrase as "sole developer/owner" in output; "owned end to end" is the ceiling):**
 - Built complete proxy bidding system from scratch across API, frontend, and admin panel
 - **NestJS/GraphQL API:** New `MaxBid` TypeORM entity with unique constraint `(userId, lotId)` — one active max bid per user per lot; TypeORM migration with FK constraints and rollback; `MaxBidModule` with service, resolver, validators; `setMaxBid` mutation (business users only, role-guarded)
 - **Bid validation:** `MaxBidAmountValidator` — validates amount ≥ current highest bid × 1.03 rounded up to nearest $100 (or lot start price if no bids); blocks non-business accounts; `NoActiveMaxBidValidator` — blocks manual bid if user has active max bid that hasn't been outbid, preventing collision between proxy and manual bidding
@@ -108,7 +108,7 @@ JUnit is a testing framework; REST APIs is not a tool.)
 
 ---
 
-**AI Price Estimator (sole owner — separate deployed product):**
+**AI Price Estimator (separate deployed product, built end-to-end — same phrasing rule: no "sole developer/solo" in output):**
 - Built standalone AI luxury resale pricing tool for Forty7: Angular 19 + Spring Boot 3.5 + Java 21 + MySQL 8 + gpt-4o vision — live in production (AWS Amplify + EC2)
 - Image upload → Cloudinary (SHA-256 dedup as `public_id`) → gpt-4o vision strict JSON classification (watch/jewelry/unknown + attribute extraction) → Angular Reactive Form pre-fill via `ngOnChanges/@Input` → domain-tuned gpt-4o pricing prompt → estimate persisted to MySQL
 - reCAPTCHA v2 gate on both estimation endpoints (`/estimate/jewelry`, `/estimate/watch`) — backend verifies token via Google siteverify before any OpenAI call
@@ -123,7 +123,7 @@ JUnit is a testing framework; REST APIs is not a tool.)
 **Bullet variants by role type** *(pick 2–3 most relevant per JD)*
 
 *Fullstack / SWE:*
-- Built proxy bidding (max bid) system end-to-end at Forty7: TypeORM entity + migration, NestJS GraphQL mutation with custom class-validator constraints, Bull queue processor for proxy resolution logic, and Angular modal UI with NGXS state — business-critical auction feature shipped as sole developer
+- Built proxy bidding (max bid) system end-to-end at Forty7: TypeORM entity + migration, NestJS GraphQL mutation with custom class-validator constraints, Bull queue processor for proxy resolution logic, and Angular modal UI with NGXS state — business-critical auction feature owned end to end
 - Contributed across Angular SSR frontend, NestJS/GraphQL backend, and admin panel at Forty7 — built WATI WhatsApp integration end-to-end (TypeORM entity → GraphQL mutation → admin UI), wired Klaviyo and Microsoft Clarity analytics, and architected guest access flow for a live auction platform
 - Built AI price estimator end-to-end (Angular 19 + Spring Boot 3.5 + gpt-4o vision, live in production): photo upload → AI classification + form pre-fill → domain-tuned pricing prompt → MySQL persistence, with reCAPTCHA gate and GitHub Actions CI/CD
 
@@ -139,7 +139,7 @@ JUnit is a testing framework; REST APIs is not a tool.)
 - Built Angular 19 estimator frontend: gpt-4o vision analyze flow, `ngOnChanges`-driven form pre-fill from AI response, reCAPTCHA render + token handling, RxJS `retry(1)` + `timeout(30000)` on analyze call
 
 *AI / product:*
-- Built and shipped AI luxury resale pricing tool at Forty7 (sole developer, live production): gpt-4o vision classifies watch/jewelry from photo and extracts attributes → domain-tuned pricing prompt with conservative secondary-market constraints → USD price range returned and persisted — 90% accuracy benchmarked on 3,000+ items against The RealReal and LoupeThis listings
+- Built and shipped AI luxury resale pricing tool at Forty7 (owned end to end, live production): gpt-4o vision classifies watch/jewelry from photo and extracts attributes → domain-tuned pricing prompt with conservative secondary-market constraints → USD price range returned and persisted — 90% accuracy benchmarked on 3,000+ items against The RealReal and LoupeThis listings
 
 *Analytics / Integrations:*
 - Integrated Klaviyo JS tracking and Microsoft Clarity identification in Angular SSR app; wired WATI WhatsApp Business API in NestJS with idempotency guard; fixed Klaviyo backend subscription flow for duplicate profile edge case
