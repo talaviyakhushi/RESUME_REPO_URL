@@ -1,6 +1,7 @@
 %-------------------------
 % Resume in Latex — canonical template for tailored resumes
-% Paste tailored-resume.md content into the marked sections.
+% Fill the SLOT markers with content from tailored-resume.md.
+% Do not change the preamble, custom commands, spacing, or section order.
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -96,11 +97,80 @@
     \href{https://github.com/talaviyakhushi}{github.com/talaviyakhushi}
 \end{center}
 
-%-----------SUMMARY (from tailored-resume.md — 3 sentences, no numbers)-----------
+%-----------SUMMARY-----------
 \section{SUMMARY}
-\small{SUMMARY-TEXT-HERE}
+\vspace{5pt}
+\small{SLOT-SUMMARY (3 sentences, no numbers, from tailored-resume.md)}
 
+%-----------SKILLS-----------
+\vspace{2pt}
+\section{SKILLS}
+\vspace{5pt}
+\begin{itemize}[leftmargin=0in, label={}]
+\small{\item{
+\textbf{SLOT-CATEGORY-1}{: SLOT-ITEMS} \\
+\textbf{SLOT-CATEGORY-2}{: SLOT-ITEMS} \\
+\textbf{SLOT-CATEGORY-3}{: SLOT-ITEMS} \\
+\textbf{SLOT-CATEGORY-4}{: SLOT-ITEMS} \\
+\textbf{SLOT-CATEGORY-5}{: SLOT-ITEMS}
+}}
+\end{itemize}
+\vspace{-10pt}
+
+%-----------EXPERIENCE-----------
+\section{PROFESSIONAL EXPERIENCE}
+\resumeSubHeadingListStart
+\vspace{10pt}
+\resumeExpHeading
+{Forty7}{Software Developer Co-op}{New York, NY}{Jan 2026 -- May 2026}
+\vspace{-13pt}
+\resumeStack{SLOT-STACK}
+\resumeItemListStart
+  \resumeItem{SLOT-BULLET-1}
+  \resumeItem{SLOT-BULLET-2}
+  \resumeItem{SLOT-BULLET-3}
+\resumeItemListEnd
+\vspace{10pt}
+\resumeExpHeading
+{New Jersey Institute of Technology (NJIT)}{Research Assistant}{Newark, NJ}{Apr 2025 -- Sep 2025}
+\vspace{-13pt}
+\resumeStack{SLOT-STACK}
+\resumeItemListStart
+  \resumeItem{SLOT-BULLET-1}
+  \resumeItem{SLOT-BULLET-2}
+  \resumeItem{SLOT-BULLET-3}
+\resumeItemListEnd
+\vspace{10pt}
+\resumeExpHeading
+{BNP Paribas}{Software Engineer Intern}{Mumbai, India}{Jan 2024 -- Jul 2024}
+\vspace{-13pt}
+\resumeStack{SLOT-STACK}
+\resumeItemListStart
+  \resumeItem{SLOT-BULLET-1}
+  \resumeItem{SLOT-BULLET-2}
+  \resumeItem{SLOT-BULLET-3}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\vspace{-3pt}
+\section{PROJECTS}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{SLOT-PROJECT-NAME} $|$ \href{SLOT-PROJECT-URL}{Link}}{SLOT-DATE}
+\vspace{-9pt}
+\resumeStack{SLOT-STACK}
+\resumeItemListStart
+  \resumeItem{SLOT-BULLET-1}
+  \resumeItem{SLOT-BULLET-2}
+  \resumeItem{SLOT-BULLET-3}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
 %-----------EDUCATION-----------
+\vspace{-3pt}
 \section{EDUCATION}
 \vspace{1pt}
 \resumeSubHeadingListStart
@@ -108,75 +178,6 @@
 \resumeSubheading
 {New Jersey Institute of Technology}{May 2026}
 {Master of Science in Computer Science $|$ GPA: 3.8}{Newark, NJ}
-\resumeSubHeadingListEnd
-
-%-----------SKILLS (from tailored-resume.md skill lines)-----------
-\vspace{2pt}
-\section{SKILLS}
-\vspace{5pt}
-\begin{itemize}[leftmargin=0in, label={}]
-\small{\item{
-\textbf{Languages}{: ...} \\
-\textbf{Databases}{: ...} \\
-\textbf{Cloud/DevOps}{: ...} \\
-\textbf{Frameworks}{: ...} \\
-\textbf{Practices}{: ...}
-}}
-\end{itemize}
-\vspace{-10pt}
-
-%-----------EXPERIENCE (bullets from tailored-resume.md, stack lines under headings)-----------
-\section{PROFESSIONAL EXPERIENCE}
-\resumeSubHeadingListStart
-\vspace{10pt}
-\resumeExpHeading
-{Forty7}{Software Developer Co-op}{New York, NY}{Jan 2026 -- May 2026}
-\vspace{-9pt}
-\resumeStack{STACK-LINE}
-\resumeItemListStart
-  \resumeItem{BULLET-1}
-  \resumeItem{BULLET-2}
-  \resumeItem{BULLET-3}
-  \resumeItem{BULLET-4}
-\resumeItemListEnd
-\vspace{10pt}
-\resumeExpHeading
-{New Jersey Institute of Technology (NJIT)}{Research Assistant}{Newark, NJ}{Apr 2025 -- Sep 2025}
-\vspace{-13pt}
-\resumeStack{STACK-LINE}
-\resumeItemListStart
-  \resumeItem{BULLET-1}
-  \resumeItem{BULLET-2}
-  \resumeItem{BULLET-3}
-\resumeItemListEnd
-\vspace{10pt}
-\resumeExpHeading
-{BNP Paribas}{Software Engineer Intern}{Mumbai, India}{Jan 2024 -- Jul 2024}
-\vspace{-13pt}
-\resumeStack{STACK-LINE}
-\resumeItemListStart
-  \resumeItem{BULLET-1}
-  \resumeItem{BULLET-2}
-  \resumeItem{BULLET-3}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-%-----------PROJECTS-----------
-\vspace{2pt}
-\section{PROJECTS}
-\resumeSubHeadingListStart
-
-\resumeProjectHeading
-{\textbf{PROJECT-NAME} $|$ \href{PROJECT-URL}{Link}}{DATE}
-\vspace{-9pt}
-\resumeStack{STACK-LINE}
-\resumeItemListStart
-  \resumeItem{BULLET-1}
-  \resumeItem{BULLET-2}
-  \resumeItem{BULLET-3}
-\resumeItemListEnd
-
 \resumeSubHeadingListEnd
 
 \end{document}
