@@ -22,18 +22,25 @@
 ## Education
 
 **New Jersey Institute of Technology** — Newark, NJ
-M.S. Computer Science | May 2026 | GPA: 3.8
+M.S. Computer Science | Completed May 2026 | GPA: 3.8
+
+(Degree is COMPLETED — never phrase as "completing", "pursuing", or "expected".)
 
 ---
 
 ## Skills
 
 **Languages:** Java, Python, TypeScript, JavaScript, SQL, HTML5, CSS3
-**Frameworks / Libraries:** Spring Boot, Spring MVC, JPA/Hibernate, Angular, NestJS, React, FastAPI, Node.js, TailwindCSS, Angular Material, RxJS, NGXS, Zustand, Apollo GraphQL
+**Frameworks / Libraries:** Spring Boot, Spring MVC, JPA/Hibernate, Angular, NestJS, React, FastAPI, Node.js, TailwindCSS, Angular Material, RxJS, NGXS, Zustand, Apollo GraphQL, Spring RestTemplate
 **Databases:** MySQL, PostgreSQL, MongoDB, Supabase (pgvector), AWS RDS
 **AI / ML:** OpenAI API (gpt-4o, gpt-4o-mini, text-embedding-3-small), RAG pipelines, vector embeddings, prompt engineering
-**Cloud / Infra:** AWS (Amplify, EC2, RDS, S3), Docker, GitHub Actions, CI/CD, Cloudinary, Supabase
-**Tools & Practices:** Maven, Git, JUnit, Postman, Jira, Figma, REST APIs, Agile/Scrum, Spring RestTemplate
+**Cloud / DevOps:** AWS (Amplify, EC2, RDS, S3), Docker, GitHub Actions, CI/CD, Cloudinary, Supabase
+**Testing / Tools:** JUnit, Git, Maven, Postman, Jira, Figma
+**Practices:** Agile/Scrum, REST and GraphQL API design, unit and integration testing
+
+(Classification note for the agent: keep categories semantically correct in
+tailored output — Agile/Scrum and API design are Practices, never Tools;
+JUnit is a testing framework; REST APIs is not a tool.)
 
 ---
 

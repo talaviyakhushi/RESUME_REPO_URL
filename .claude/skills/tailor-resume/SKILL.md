@@ -114,7 +114,15 @@ scan, then a recruiter skimming for ~7 seconds. Write for them.
   work). Never adopt a keyword for something the candidate hasn't done.
   Full rules in `references/keyword-alignment.md`.
 - **Summary rewrite.** Rewrite the summary section to speak to this role,
-  using only facts from `resume.md`.
+  using only facts from `resume.md`. Rules:
+  - Exactly 3 sentences, ~45-55 words total.
+  - **No numbers or metrics in the summary** — accuracy percentages, user
+    counts, item counts all live in bullets, never here.
+  - Sentence shape: (1) who + degree status + core languages, (2) what has
+    been shipped, in plain terms, (3) breadth — ownership across design,
+    deployment, APIs, databases, CI/CD.
+  - Degree status must match `resume.md` exactly — if it says completed,
+    never write "completing", "pursuing", or "expected".
 - **Length.** Keep the tailored resume to roughly one page of markdown.
 
 ## Hard boundaries — never violate these
