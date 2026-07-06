@@ -78,10 +78,18 @@ Every bullet in `tailored-resume.md` follows STAR compressed to one line:
 - Never write plain "Built X using Y" activity bullets. If the master profile
   phrases something that way, reframe it around the problem it solved or the
   outcome it enabled.
-- Results with numbers beat qualitative results — but ONLY use metrics that
-  exist in `resume.md`. Never invent or extrapolate a number.
-- When no metric exists, the result clause is qualitative but concrete
-  (what became possible, what failure stopped happening).
+- **Every bullet must contain at least one concrete number** (metric, scale,
+  count, duration, accuracy) taken from `resume.md` — 90%, 3,000+, 15 lots,
+  100 users, 500K documents, 12-person team, 10+ endpoints, under 3 minutes.
+  This is a hard requirement, not a preference:
+  - When choosing between candidate facts for a bullet slot, the fact with a
+    number wins.
+  - Before finishing each role, audit its bullets: at most ONE bullet per
+    role may lack a number, and only when `resume.md` genuinely has no number
+    for any phrasing of that fact.
+  - ONLY numbers that exist in `resume.md`. Never invent or extrapolate.
+- When no metric exists after that audit, the result clause is qualitative
+  but concrete (what became possible, what failure stopped happening).
 
 ## Audience rule — ATS first, recruiter second, engineer last
 
