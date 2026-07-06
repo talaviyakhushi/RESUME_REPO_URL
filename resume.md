@@ -21,8 +21,8 @@
 
 ## Education
 
-**New Jersey Institute of Technology**
-M.S. Computer Science | May 2026
+**New Jersey Institute of Technology** — Newark, NJ
+M.S. Computer Science | May 2026 | GPA: 3.8
 
 ---
 
@@ -40,6 +40,7 @@ M.S. Computer Science | May 2026
 ## Experience
 
 ### Forty7 — Software Developer Co-op
+**Location:** New York, NY
 **Duration:** January 2026 – May 2026
 **Stack:** Angular 18, TypeScript, NGXS, Apollo GraphQL (codegen), NestJS, TypeORM, PostgreSQL, AWS (S3, SES, SNS), Angular SSR, Klaviyo API, WATI (WhatsApp Business API), Microsoft Clarity, SCSS
 **Project context:** Forty7 is a live diamond and gemstone auction platform with 100 users — Angular SSR frontend, NestJS/GraphQL API, Angular admin panel. Khushi joined an existing production codebase and took over as its sole developer, contributing across all three apps: third-party marketing/analytics integrations, guest access architecture, new pages from scratch, GraphQL schema extensions, and NestJS backend fixes.
@@ -139,6 +140,7 @@ M.S. Computer Science | May 2026
 ---
 
 ### NJIT — Research Assistant (under Prof. Komal Kumari)
+**Location:** Newark, NJ
 **Duration:** April 2025 – September 2025
 **Stack:** Angular 15, TypeScript, Java 17, Spring Boot 3.4.5, REST APIs, Maven, Node.js, Gson, Jackson
 **System context:** DBO (Document-Based Outsourcing) — document outsourcing research system. Documents distributed across 4 servers; clients search by keyword with access control per client. Khushi owned the full frontend and REST API layer. The research was published; the system was validated at 500K-document scale for the paper (scale testing performed after Khushi's involvement ended — frame as "contributed to published research", not as tests she ran).
@@ -191,6 +193,7 @@ M.S. Computer Science | May 2026
 ---
 
 ### BNP Paribas — Software Engineer Intern
+**Location:** Mumbai, India
 **Duration:** January 2024 – July 2024
 **Stack:** Java, Spring Boot, Angular, REST APIs, Maven, Git, JUnit, Agile/Scrum
 **Project context:** Legacy financial risk-calculation engine being migrated from C and .NET to Java Spring Boot (Maven) for maintainability and modern tooling — a large multi-year migration (still ongoing 2+ years after Khushi's departure), delivered by a 12-person team. Khushi contributed across the full migration — backend logic, frontend, CSS — and also built an internal developer productivity tool from scratch in the onboarding phase.
@@ -242,6 +245,7 @@ M.S. Computer Science | May 2026
 ## Projects
 
 ### Outfitted — AI Personal Styling Assistant
+**Date:** March 2026 – present
 **Repo:** https://github.com/talaviyakhushi/outfitted
 **Stack:** React 18, Vite, TailwindCSS, React Router, Zustand, FastAPI (Python), PostgreSQL (Supabase), pgvector, OpenAI API (gpt-4o, gpt-4o-mini, text-embedding-3-small), Cloudinary, rembg, Supabase Auth
 **Tags:** AI, agentic, RAG, fullstack, personal project
