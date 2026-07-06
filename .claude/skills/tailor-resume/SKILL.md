@@ -76,8 +76,9 @@ Every bullet in `tailored-resume.md` follows STAR compressed to one line:
 The resume has two gatekeepers before any engineer reads it: the ATS keyword
 scan, then a recruiter skimming for ~7 seconds. Write for them.
 
-- **Max 2 lines (~25 words) per bullet.** One idea per bullet. No chained
-  arrows (`A → B → C`), no multi-clause pile-ups.
+- **Hard cap: 25 words per bullet.** Count the words; 26+ is a violation —
+  rewrite until it fits. One idea per bullet. No chained arrows (`A → B → C`),
+  no multi-clause pile-ups.
 - **JD keywords must appear in plain sight** — name the technology the way
   the JD names it (e.g. "CI/CD pipeline", "REST APIs", "PostgreSQL"), because
   that is what the ATS matches on.
