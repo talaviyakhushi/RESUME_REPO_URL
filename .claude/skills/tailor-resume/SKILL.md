@@ -171,13 +171,20 @@ scan, then a recruiter skimming for ~7 seconds. Write for them.
 - **Summary rewrite.** Rewrite the summary section to speak to this role,
   using only facts from `resume.md`. Rules:
   - Exactly 3 sentences, ~45-55 words total.
-  - **No numbers or metrics in the summary** — accuracy percentages, user
-    counts, item counts all live in bullets, never here.
-  - Sentence shape: (1) who + degree status + core languages, (2) what has
-    been shipped, in plain terms, (3) breadth — ownership across design,
-    deployment, APIs, databases, CI/CD.
+  - No numbers or metrics — accuracy percentages, user counts, item counts
+    all live in bullets, never in the summary.
+  - Sentence 1: who they are (e.g. "backend-focused software engineer"),
+    degree status, core languages/stack.
+  - Sentence 2: what kind of work they've actually shipped, in plain terms
+    (e.g. "production systems, research projects, enterprise codebases").
+  - Sentence 3: how they work and what they're focused on (e.g. independence,
+    picking up new codebases, clean/testable code, solving real problems).
   - Degree status must match `resume.md` exactly — if it says completed,
     never write "completing", "pursuing", or "expected".
+  - Apply the banned weak-starts and banned-clichés lists from
+    `references/recruiter-heuristics.md`. No trait-adjective openers
+    ("thrives on", "passionate about", "proven track record"). Plain,
+    factual sentences only.
 - **Length.** Keep the tailored resume to roughly one page of markdown.
 
 ## Hard boundaries — never violate these
