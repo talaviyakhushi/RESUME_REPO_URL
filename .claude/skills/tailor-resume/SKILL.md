@@ -173,12 +173,18 @@ scan, then a recruiter skimming for ~7 seconds. Write for them.
   - Exactly 3 sentences, ~45-55 words total.
   - No numbers or metrics — accuracy percentages, user counts, item counts
     all live in bullets, never in the summary.
-  - Sentence 1: who they are (e.g. "backend-focused software engineer"),
-    degree status, core languages/stack.
-  - Sentence 2: what kind of work they've actually shipped, in plain terms
-    (e.g. "production systems, research projects, enterprise codebases").
-  - Sentence 3: how they work and what they're focused on (e.g. independence,
-    picking up new codebases, clean/testable code, solving real problems).
+  - **No tech-stack enumeration.** Sentence 1 may name at most 1-2
+    technologies total across the whole summary (or zero) — never list
+    frameworks back-to-back ("Java, Python, TypeScript, Spring Boot, NestJS,
+    React, Angular"). Describe the *kind* of work instead ("full-stack web
+    development", "backend systems", "GenAI applications") and let the
+    Skills section carry the actual tool names.
+  - **Match tone to seniority level in the JD.** For roles explicitly framed
+    as junior/mentored ("under the guidance of", "entry-level", "apply
+    feedback from senior engineers"), lean the summary toward eagerness to
+    learn and collaboration — not pure self-sufficiency. For senior/ownership
+    JDs, lean toward independence and end-to-end ownership. Never claim a
+    seniority posture the JD doesn't ask for.
   - Degree status must match `resume.md` exactly — if it says completed,
     never write "completing", "pursuing", or "expected".
   - Apply the banned weak-starts and banned-clichés lists from
