@@ -33,7 +33,6 @@ M.S. Computer Science | Completed May 2026 | GPA: 3.8
 **Languages:** Java, Python, TypeScript, JavaScript, SQL, HTML5, CSS3
 **Frameworks / Libraries:** Spring Boot, Spring MVC, JPA/Hibernate, Angular, NestJS, React, FastAPI, Node.js, TailwindCSS, Angular Material, RxJS, NGXS, Zustand, Apollo GraphQL, Spring RestTemplate
 **Databases:** MySQL, PostgreSQL, MongoDB, Supabase (pgvector), AWS RDS
-**AI / ML:** OpenAI API (gpt-4o, gpt-4o-mini, text-embedding-3-small), RAG pipelines, vector embeddings, prompt engineering
 **Cloud / DevOps:** AWS (Amplify, EC2, RDS, S3), Docker, GitHub Actions, CI/CD, Cloudinary, Supabase
 **Testing / Tools:** JUnit, Git, Maven, Postman, Jira, Figma
 **Practices:** Agile/Scrum, REST and GraphQL API design, unit and integration testing
@@ -41,6 +40,12 @@ M.S. Computer Science | Completed May 2026 | GPA: 3.8
 (Classification note for the agent: keep categories semantically correct in
 tailored output — Agile/Scrum and API design are Practices, never Tools;
 JUnit is a testing framework; REST APIs is not a tool.)
+
+(No "AI / ML" skills category — OpenAI API usage is real project work (see
+Outfitted, AI Price Estimator) but calling it out as a Skills-section
+category overstates it; it's API integration, not ML expertise. OpenAI/RAG/
+embeddings may still appear in project and experience bullets where the work
+itself is the evidence, just never as a standalone Skills line.)
 
 ---
 
