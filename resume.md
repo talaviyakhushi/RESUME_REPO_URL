@@ -252,7 +252,7 @@ JUnit is a testing framework; REST APIs is not a tool.)
 ## Projects
 
 ### Outfitted — AI Personal Styling Assistant
-**Date:** March 2026 – present
+**Date:** March 2026
 **Repo:** https://github.com/talaviyakhushi/outfitted
 **Stack:** React 18, Vite, TailwindCSS, React Router, Zustand, FastAPI (Python), PostgreSQL (Supabase), pgvector, OpenAI API (gpt-4o, gpt-4o-mini, text-embedding-3-small), Cloudinary, rembg, Supabase Auth
 **Tags:** AI, agentic, RAG, fullstack, personal project

@@ -1,6 +1,6 @@
 ---
 name: tailor-resume
-description: Tailor resume.md to a specific job posting without fabricating anything — fit report, honest tailored resume, change summary. Read this before making any changes when asked to tailor the resume in this repository.
+description: Tailor resume.md to a specific job posting without fabricating anything — outputs a short fit-report.md and a ready-to-compile tailored-resume.tex. Read this before making any changes when asked to tailor the resume in this repository.
 ---
 
 # Tailor resume for one job
@@ -12,31 +12,37 @@ specific job posting supplied in the prompt. Follow every rule in this file.
 
 - Read `resume.md` in the repo root completely before writing anything. It is
   the single source of truth about the candidate.
-- JD requirements not supported by `resume.md` go in the fit report's
-  **Do not add** section only — never into `tailored-resume.md`.
+- JD requirements not supported by `resume.md` are silently excluded from the
+  resume — never fabricated, and never written out in detail (see Output
+  convention below on keeping the fit report short).
 
 ## Workflow
 
+Only two files are ever written. Everything else below (JD classification,
+risk map, bullet drafting, keyword mapping) is internal reasoning — do not
+externalize it into extra files or a long fit report. This keeps runs fast
+and cheap.
+
 1. **Ingest** — Read the per-run prompt (company, role, URL, job description).
-   Load `references/jd-extraction-taxonomy.md` and classify each JD requirement.
-2. **Fit report** — Load `references/fit-report.md`. Pick the fit tier from that
-   reference and include the required `**Verdict:**` line. Write
-   `jobs/{company-slug}/{role-slug}/fit-report.md` with **Overall fit**,
-   **Strong matches**, **Gaps**, **Do not add**.
-3. **Tailor** — Load `references/keyword-alignment.md`,
+   Internally classify JD requirements (use `references/jd-extraction-taxonomy.md`
+   as the mental model, not a file to write output into).
+2. **Fit report** — Load `references/fit-report.md`. Decide the tier
+   internally, then write the **short** `jobs/{company-slug}/{role-slug}/fit-report.md`
+   per the compact format in that reference — tier, verdict, 1-2 sentence
+   reason. No Strong matches / Gaps / Do not add tables.
+3. **Tailor (internal)** — Load `references/keyword-alignment.md`,
    `references/markdown-resume-structure.md`,
    `references/ats-formatting-and-parsing.md`, and
    `references/recruiter-heuristics.md`. Build the recruiter-side risk map
-   internally, then write `tailored-resume.md` by rephrasing/reordering/
-   emphasizing facts from `resume.md` only. Respect the fixed bullet counts
-   in `references/markdown-resume-structure.md` (Forty7: 3, NJIT RA: 3,
-   BNP: 3, each project: 3).
-4. **Change summary** — Load `references/change-summary.md`. Document every
-   meaningful edit in `change-summary.md`.
-4b. **LaTeX output** — Read `templates/resume-template.tex` and write
-   `tailored-resume.tex` in the same job folder: fill the template's
+   internally, then compose the tailored resume content (summary, skills,
+   stack lines, bullets) in memory by rephrasing/reordering/emphasizing facts
+   from `resume.md` only — do not write this to a separate markdown file.
+   Respect the fixed bullet counts in `references/markdown-resume-structure.md`
+   (Forty7: 3, NJIT RA: 3, BNP: 3, each project: 3).
+4. **LaTeX output** — Read `templates/resume-template.tex` and write
+   `jobs/{company-slug}/{role-slug}/tailored-resume.tex`: fill the template's
    placeholder slots (summary, skills lines, stack lines, bullets, project
-   block) with the exact content of `tailored-resume.md`. Rules:
+   block) with the composed content from step 3. Rules:
    - Escape LaTeX special characters: `%` → `\%`, `&` → `\&`, `#` → `\#`,
      `$` → `\$`, `_` → `\_`.
    - Date ranges use `--` (e.g. `Jan 2026 -- May 2026`).
@@ -44,21 +50,19 @@ specific job posting supplied in the prompt. Follow every rule in this file.
      content goes into the marked slots only.
    - Keep heading structure: company bold via `\resumeExpHeading`, stack via
      `\resumeStack`, bullets via `\resumeItem`.
-5. **Quality** — Skim `references/anti-patterns.md` and
-   `references/agent-governance.md`. Run the six-second clarity gate and the
-   ASCII normalization check from `references/recruiter-heuristics.md` on
-   `tailored-resume.md`. Optional: note plaintext test steps from
-   `references/export-and-plaintext-test.md`.
+5. **Quality** — Before writing the `.tex`, self-check the composed content
+   against `references/anti-patterns.md`, `references/agent-governance.md`,
+   and the six-second clarity gate + ASCII normalization rules in
+   `references/recruiter-heuristics.md`. Fix violations in memory, then write
+   the file once.
 
 ## Output location convention
 
-Write exactly four files, creating directories as needed:
+Write exactly two files, creating directories as needed:
 
 ```
 jobs/{company-slug}/{role-slug}/fit-report.md
-jobs/{company-slug}/{role-slug}/tailored-resume.md
 jobs/{company-slug}/{role-slug}/tailored-resume.tex
-jobs/{company-slug}/{role-slug}/change-summary.md
 ```
 
 Slugs are lowercase, non-alphanumeric runs replaced with single hyphens; strip
@@ -66,10 +70,12 @@ legal suffixes (Inc, LLC, Ltd) from company names
 (e.g. "Acme Corp Inc." → `acme-corp`, "Senior Software Engineer" → `senior-software-engineer`).
 
 Never modify `resume.md` itself or delete anything outside your output folder.
+Never write `tailored-resume.md` or `change-summary.md` — those are retired.
 
 ## Bullet style — STAR method, always
 
-Every bullet in `tailored-resume.md` follows STAR compressed to one line:
+Every bullet in the composed resume content (and the final `tailored-resume.tex`)
+follows STAR compressed to one line:
 **outcome/result first, then the action and context that produced it.**
 
 - Pattern: `<Result or problem solved> by <action> <context/stack>` — e.g.
@@ -140,7 +146,7 @@ scan, then a recruiter skimming for ~7 seconds. Write for them.
   that is what the ATS matches on.
 - **No implementation internals**: never include function names, file names,
   class names, config values, shell commands, code syntax, or backticked
-  identifiers in `tailored-resume.md`. "Automated deployment with a CI/CD
+  identifiers in `tailored-resume.tex`. "Automated deployment with a CI/CD
   pipeline (GitHub Actions, AWS EC2)" — not the build → SCP → systemd chain.
 - **Plain-English verbs a non-engineer understands**: built, launched,
   automated, reduced, sped up, secured, scaled. The recruiter must grasp what

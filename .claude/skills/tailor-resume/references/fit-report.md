@@ -1,38 +1,28 @@
-# Fit report schema
+# Fit report schema — short form only
 
-Required sections:
-
-## Overall fit
-
-Use the existing three tiers, then add a plain-language verdict and next step.
-
-Required format:
+`fit-report.md` is a status readout, not an evaluation essay. The full
+strong-matches/gaps/do-not-add analysis still happens internally (it's what
+keeps the tailored resume honest) but none of that analysis gets written out.
+The whole file is this, nothing more:
 
 ```md
-**Tier:** Strong | Moderate | Stretch
-**Verdict:** <plain-language verdict from the table below>
+# Fit Report — {Company}, {Role}
 
-2-3 sentences explaining why this tier fits the role, what the candidate should do next, and how the resume should be positioned honestly.
+**Tier:** Strong | Moderate | Stretch
+**Verdict:** <verdict line from the table below>
+
+1-2 sentences: the single biggest reason for this tier, and the one gap (if
+any) worth knowing before applying.
 ```
 
-| Tier | Required verdict line | Recommended next step |
-|------|-----------------------|-----------------------|
-| **Strong** | `**Verdict:** Good fit - apply with the tailored resume` | Apply with the tailored resume. |
-| **Moderate** | `**Verdict:** Reasonable fit with gaps - review gaps before applying` | Apply only if the candidate can honestly speak to the gaps. |
-| **Stretch** | `**Verdict:** Too far a stretch for this role - try closer-aligned roles` | Prefer roles aligned closer to the skills already supported by `resume.md` instead of forcing this application. |
+| Tier | Required verdict line |
+|------|-----------------------|
+| **Strong** | `**Verdict:** Good fit - apply with the tailored resume` |
+| **Moderate** | `**Verdict:** Reasonable fit with gaps - review gaps before applying` |
+| **Stretch** | `**Verdict:** Too far a stretch for this role - try closer-aligned roles` |
 
-Keep the tier keyword (`Strong`, `Moderate`, or `Stretch`) visible on the `**Tier:**` line. Do not soften a Stretch verdict by inventing unsupported experience; the next sections should explain the honest matches and gaps.
+Keep the tier keyword (`Strong`, `Moderate`, or `Stretch`) visible on the
+`**Tier:**` line. Do not soften a Stretch verdict by inventing unsupported
+experience — say it's a stretch and stop; no bullet lists, no tables.
 
-## Strong matches
-
-Bullets tying JD requirements to evidence in `resume.md`.
-
-## Gaps
-
-Skills or themes underrepresented vs JD; honest framing only.
-
-## Do not add
-
-List JD items with **no** support in `resume.md`. These must not appear in `tailored-resume.md`.
-
-Optional: searchability checklist (title match, core stack named, years of experience visible).
+Target length: under 10 lines total.
