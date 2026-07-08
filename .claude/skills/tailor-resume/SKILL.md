@@ -56,7 +56,9 @@ and cheap.
      the skill. If the JD asks for a skill absent from `resume.md`, it stays
      absent from the tailored resume — never adopted just because the JD
      named it.
-4. **LaTeX output** — Read `templates/resume-template.tex` and write
+4. **LaTeX output** — Read `templates/resume-template.tex` (this path is
+   relative to the **repo root** — a top-level `templates/` folder, NOT
+   nested under `.claude/skills/tailor-resume/`) and write
    `jobs/{company-slug}/{role-slug}/tailored-resume.tex`: fill the template's
    placeholder slots (summary, skills lines, stack lines, bullets, project
    block) with the composed content from step 3. Rules:
