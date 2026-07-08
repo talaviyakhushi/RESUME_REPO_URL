@@ -12,9 +12,18 @@ specific job posting supplied in the prompt. Follow every rule in this file.
 
 - Read `resume.md` in the repo root completely before writing anything. It is
   the single source of truth about the candidate.
+- Hierarchy when facts conflict: `resume.md` > verified JD facts > stylistic
+  suggestions.
+- Inline notes in `resume.md` (e.g. "frame as...", "do not phrase as...", "not
+  as tests she ran") are binding wording constraints, not background color —
+  equal in priority to the hard boundaries below. Apply the framing exactly
+  as written; no bullet or summary sentence may imply beyond what the note
+  allows.
 - JD requirements not supported by `resume.md` are silently excluded from the
   resume — never fabricated, and never written out in detail (see Output
   convention below on keeping the fit report short).
+- A human reviews the PR before applying — this skill never auto-submits an
+  application.
 
 ## Workflow
 
@@ -24,21 +33,29 @@ externalize it into extra files or a long fit report. This keeps runs fast
 and cheap.
 
 1. **Ingest** — Read the per-run prompt (company, role, URL, job description).
-   Internally classify JD requirements (use `references/jd-extraction-taxonomy.md`
-   as the mental model, not a file to write output into).
+   Internally classify each JD line into one of: Must-have, Preferred,
+   Responsibilities, Tools/stack, Nice-to-have. Must-have and
+   Responsibilities map to Strong-match reasoning when evidenced; Preferred
+   and Nice-to-have map to Gap reasoning when missing; Tools/stack maps to
+   skills alignment.
 2. **Fit report** — Load `references/fit-report.md`. Decide the tier
    internally, then write the **short** `jobs/{company-slug}/{role-slug}/fit-report.md`
    per the compact format in that reference — tier, verdict, 1-2 sentence
    reason. No Strong matches / Gaps / Do not add tables.
-3. **Tailor (internal)** — Load `references/keyword-alignment.md`,
-   `references/markdown-resume-structure.md`,
-   `references/ats-formatting-and-parsing.md`, and
-   `references/recruiter-heuristics.md`. Build the recruiter-side risk map
+3. **Tailor (internal)** — Load `references/format-and-recruiter-rules.md`
+   (ATS formatting, resume structure, bullet counts, stack-line rules,
+   recruiter heuristics — all in one file). Build the recruiter-side risk map
    internally, then compose the tailored resume content (summary, skills,
    stack lines, bullets) in memory by rephrasing/reordering/emphasizing facts
    from `resume.md` only — do not write this to a separate markdown file.
-   Respect the fixed bullet counts in `references/markdown-resume-structure.md`
-   (Forty7: 3, NJIT RA: 3, BNP: 3, each project: 3).
+   Respect the fixed bullet counts in that reference (Forty7: 3, NJIT RA: 3,
+   BNP: 3, each project: 3).
+   - Keyword alignment: mirror JD phrasing only when factually equivalent to
+     `resume.md` (~1-2 aligned terms per bullet, never keyword-stuffed).
+     Expand an acronym once if the JD uses the long form and the resume has
+     the skill. If the JD asks for a skill absent from `resume.md`, it stays
+     absent from the tailored resume — never adopted just because the JD
+     named it.
 4. **LaTeX output** — Read `templates/resume-template.tex` and write
    `jobs/{company-slug}/{role-slug}/tailored-resume.tex`: fill the template's
    placeholder slots (summary, skills lines, stack lines, bullets, project
@@ -51,10 +68,9 @@ and cheap.
    - Keep heading structure: company bold via `\resumeExpHeading`, stack via
      `\resumeStack`, bullets via `\resumeItem`.
 5. **Quality** — Before writing the `.tex`, self-check the composed content
-   against `references/anti-patterns.md`, `references/agent-governance.md`,
-   and the six-second clarity gate + ASCII normalization rules in
-   `references/recruiter-heuristics.md`. Fix violations in memory, then write
-   the file once.
+   against the Hard boundaries section below and the six-second clarity gate
+   + ASCII normalization rules in `references/format-and-recruiter-rules.md`.
+   Fix violations in memory, then write the file once.
 
 ## Output location convention
 
@@ -115,7 +131,7 @@ scan, then a recruiter skimming for ~7 seconds. Write for them.
   interviews.
 - **No parenthetical tech-stack dumps in bullets.** Stack lives on the
   `*Stack:*` line under each role heading (see
-  `references/markdown-resume-structure.md`); a bullet names at most 1-2
+  `references/format-and-recruiter-rules.md`); a bullet names at most 1-2
   technologies, woven into the sentence.
 - **Don't re-list the stack line inside bullets.** If the stack line already
   says NestJS, GraphQL, TypeORM, Bull queue, a bullet that recites three of
@@ -169,11 +185,6 @@ scan, then a recruiter skimming for ~7 seconds. Write for them.
 
 - **Reorder and emphasize, don't invent.** Move the most relevant experience
   and bullets to the top. Trim bullets that are irrelevant to this posting.
-- **Keyword alignment.** Where the posting and the resume describe the same
-  thing with different words, adopt the posting's phrasing — only when it is
-  honestly equivalent (e.g. "CI/CD pipelines" for existing deploy-tooling
-  work). Never adopt a keyword for something the candidate hasn't done.
-  Full rules in `references/keyword-alignment.md`.
 - **Summary rewrite.** Rewrite the summary section to speak to this role,
   using only facts from `resume.md`. Rules:
   - Exactly 3 sentences, ~45-55 words total.
@@ -194,7 +205,7 @@ scan, then a recruiter skimming for ~7 seconds. Write for them.
   - Degree status must match `resume.md` exactly — if it says completed,
     never write "completing", "pursuing", or "expected".
   - Apply the banned weak-starts and banned-clichés lists from
-    `references/recruiter-heuristics.md`. No trait-adjective openers
+    `references/format-and-recruiter-rules.md`. No trait-adjective openers
     ("thrives on", "passionate about", "proven track record"). Plain,
     factual sentences only.
 - **Length.** Keep the tailored resume to roughly one page of markdown.
@@ -207,8 +218,15 @@ scan, then a recruiter skimming for ~7 seconds. Write for them.
   multipliers). Metrics may only be copied verbatim from `resume.md`.
 - Never inflate seniority ("led" stays "led" only if `resume.md` says so).
 - Never claim certifications, degrees, or publications not in `resume.md`.
+- Never hide keywords in white text, metadata, or any invisible layer.
+- Never paste JD paragraphs into the resume body.
+- Never add a metric that can't be traced verbatim to `resume.md`.
+- Never carry a skill forward from `resume.md`'s Skills section into the
+  tailored resume without checking it's backed by at least one bullet, stack
+  line, or project elsewhere in `resume.md` — an unbacked skill gets cut.
+- Do not delete rare-but-true skills from the master profile; only
+  de-emphasize (omit) them in a given tailored resume if irrelevant to that
+  JD. The tailored resume is a **view** of the master profile for one role,
+  never a second source of truth.
 - If the job is a poor fit, say so in `fit-report.md` with the Stretch tier —
   do not force a match.
-
-See `references/anti-patterns.md` and `references/master-profile-contract.md`
-for the full contract.
