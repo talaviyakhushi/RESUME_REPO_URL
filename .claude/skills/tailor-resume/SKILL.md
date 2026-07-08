@@ -160,10 +160,25 @@ scan, then a recruiter skimming for ~7 seconds. Write for them.
 - **JD keywords must appear in plain sight** — name the technology the way
   the JD names it (e.g. "CI/CD pipeline", "REST APIs", "PostgreSQL"), because
   that is what the ATS matches on.
-- **No implementation internals**: never include function names, file names,
-  class names, config values, shell commands, code syntax, or backticked
-  identifiers in `tailored-resume.tex`. "Automated deployment with a CI/CD
-  pipeline (GitHub Actions, AWS EC2)" — not the build → SCP → systemd chain.
+- **No implementation internals** — this covers both literal code syntax
+  AND conceptual implementation-pattern jargon a recruiter has never heard
+  of, even when it isn't literally a function/file/class name:
+  - Never include function names, file names, class names, config values,
+    shell commands, code syntax, or backticked identifiers. "Automated
+    deployment with a CI/CD pipeline (GitHub Actions, AWS EC2)" — not the
+    build → SCP → systemd chain.
+  - Never name a queueing/job-runner mechanism (e.g. "Bull queue job",
+    "cron job", "worker process") — say "background job" or "automated job."
+  - Never name an ORM/framework-internal concept (e.g. "TypeORM entity",
+    "Django model", "Mongoose schema") — say "database record" or "database
+    schema."
+  - Never name a GraphQL/API-internal term (e.g. "GraphQL mutation",
+    "resolver", "middleware") — say "write operation" or "API endpoint."
+  - Never cite an HTTP status code (e.g. "409 API response", "404 error") —
+    describe the situation instead: "a duplicate-request error."
+  - Test: only recognizable technology *brand names* (NestJS, GraphQL,
+    PostgreSQL, AWS, React) are allowed as nouns — the pattern or mechanism
+    behind them is described in plain words, never named.
 - **Plain-English verbs a non-engineer understands**: built, launched,
   automated, reduced, sped up, secured, scaled. The recruiter must grasp what
   happened without knowing what systemd or a Bull queue is.
